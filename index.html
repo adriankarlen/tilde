@@ -134,9 +134,9 @@
 
 <style>
   :root {
-    --color-background: #111;
-    --color-text-subtle: #999;
-    --color-text: #eee;
+    --color-background: #1F2430;
+    --color-text-subtle: #707A8C;
+    --color-text: #CCCAC2;
     --font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica,
       Ubuntu, Roboto, Noto, Segoe UI, Arial, sans-serif;
     --font-size-1: 1rem;
@@ -151,13 +151,13 @@
     --transition-speed: 200ms;
   }
 
-  @media (prefers-color-scheme: light) {
+  {# @media (prefers-color-scheme: light) {
     :root {
-      --color-background: #eee;
-      --color-text-subtle: #777;
-      --color-text: #111;
+      --color-background: #F8F9FA;
+      --color-text-subtle: #819199;
+      --color-text: #5C6166;
     }
-  }
+  } #}
 
   html {
     background-color: var(--color-background);
@@ -314,6 +314,7 @@
     .input {
       font-size: var(--font-size-2);
       font-weight: var(--font-weight-bold);
+      color: var(--color-text);
       padding: 0;
       text-align: center;
       width: 100%;
@@ -339,6 +340,7 @@
       transition: color var(--transition-speed);
       white-space: nowrap;
       z-index: 1;
+      color: var(--color-text-subtle);
     }
 
     .suggestion:focus,
@@ -368,7 +370,7 @@
     }
 
     .match {
-      color: var(--color-text-subtle);
+      color: var(--color-text);
       transition: color var(--transition-speed);
     }
 
